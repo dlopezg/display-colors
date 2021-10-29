@@ -185,6 +185,26 @@ for i = 1 : length(sch.neptune)-1
        generateGradient(sch.neptune{i},sch.neptune{i+1},57)];
 end
 
+%% Color gradient : MVPALab2
+grd.fusion = [];
+sch.fusion = {
+    [1,3,3]/255;
+    [8,23,51]/255;
+    [40,35,147]/255;
+    [99,62,133]/255;
+    [148,84,135]/255;
+    [207,104,111]/255;
+    [239,148,92]/255;
+    [240,184,125]/255;
+    [236,206,166]/255;
+    [255,255,255]/255;
+    };
+
+for i = 1 : length(sch.fusion)-1
+   grd.fusion = [grd.fusion;...
+       generateGradient(sch.fusion{i},sch.fusion{i+1},57)];
+end
+
 %% Color gradient : MVPALab
 grd.mvpalab = [];
 sch.mvpalab = {
@@ -209,8 +229,8 @@ grd.mvpalab = [
     ];
 
 %% Display:
-displayColors(grd.earth);
-displayColors(sch.earth);
+displayColors(grd);
+displayColors(sch);
 
 %% Save schemes:
 save('color_schemes.mat','grd','sch');
