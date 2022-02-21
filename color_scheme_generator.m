@@ -228,6 +228,26 @@ grd.mvpalab = [
     generateGradient(sch.mvpalab{end},sch.mvpalab{1},256)
     ];
 
+%% Color gradient : Aguamarine
+grd.aguamarine = [];
+sch.aguamarine = {
+    [15,80,100]/255;
+    [46,103,121]/255;
+    [67,119,135]/255;
+    [87,134,149]/255;
+    [105,147,160]/255;
+    [125,163,175]/255;
+    [146,178,189]/255;
+    [167,194,204]/255;
+    [187,209,218]/255;
+    [205,222,230]/255;
+    };
+
+for i = 1 : length(sch.aguamarine)-1
+   grd.aguamarine = [grd.aguamarine;...
+       generateGradient(sch.aguamarine{i},sch.aguamarine{i+1},57)];
+end
+
 %% Display:
 displayColors(grd);
 displayColors(sch);
