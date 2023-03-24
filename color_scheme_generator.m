@@ -248,6 +248,21 @@ for i = 1 : length(sch.aguamarine)-1
        generateGradient(sch.aguamarine{i},sch.aguamarine{i+1},57)];
 end
 
+%% Color gradient : Thesis
+grd.thesis = [];
+sch.thesis = {
+    [185,76,93]/255;
+    [185,76,93]/255;
+    [255,255,255]/255;
+    [100,100,100]/255;
+    [100,100,100]/255;
+    };
+
+for i = 1 : length(sch.thesis)-1
+   grd.thesis = [grd.thesis;...
+       generateGradient(sch.thesis{i},sch.thesis{i+1},57)];
+end
+
 %% Display:
 displayColors(grd);
 displayColors(sch);
